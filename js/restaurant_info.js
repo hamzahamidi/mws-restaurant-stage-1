@@ -80,10 +80,13 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 
     const day = document.createElement('td');
     day.innerHTML = key;
+    day.setAttribute("aria-label", "Open on " + key);
     row.appendChild(day);
+
 
     const time = document.createElement('td');
     time.innerHTML = operatingHours[key];
+    time.setAttribute("aria-label", "Opening hours from: " + operatingHours[key]);
     row.appendChild(time);
 
     hours.appendChild(row);
@@ -143,6 +146,7 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
+  li.setAttribute('aria-current', restaurant.name);
   breadcrumb.appendChild(li);
 }
 
