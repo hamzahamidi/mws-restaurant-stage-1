@@ -72,12 +72,12 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    background-color: #eee;
+    padding: 10px;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    position: absolute;
+    background-color: #F8F9FA;
+    top:80px;
 }
 
 /* Display list items side by side */
@@ -281,7 +281,21 @@ nav h1 a {
 }
 #reviews-list li p {
   margin: 0 0 10px;
+  font-size: 0.8em;
+}
+#restaurant-hours {
+  width: 90%;
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media only screen and (max-width: 950px) {
+  .inside #map-container {
+    width: 100%;
+    position: relative;
+  }
+  #restaurant-container, #reviews-container,.inside #footer, #breadcrumb {
+    width: 100%;
+}
 }
