@@ -31,7 +31,7 @@ a img{
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 0 20px;
+  margin: 0;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -167,7 +167,7 @@ nav h1 a {
   min-height: 248px;
   min-width: 100%;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -257,7 +257,7 @@ nav h1 a {
 #reviews-container {
   padding: 30px 40px 80px;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
@@ -281,7 +281,7 @@ nav h1 a {
 }
 #reviews-list li p {
   margin: 0 0 10px;
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 #restaurant-hours {
   width: 90%;
@@ -292,10 +292,18 @@ nav h1 a {
 
 @media only screen and (max-width: 950px) {
   .inside #map-container {
-    width: 100%;
-    position: relative;
+    position: absolute;
+    width: calc(100% - 30px);
+    max-height: 400px;
+    margin: 15px;
+    top: 130px;
   }
-  #restaurant-container, #reviews-container,.inside #footer, #breadcrumb {
+  #restaurant-container
+  {
+    padding: 540px 40px 30px;
+    width: 100%;
+  }
+  .inside #footer, #breadcrumb, #reviews-container {
     width: 100%;
 }
 }
