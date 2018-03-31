@@ -88,6 +88,9 @@ window.initMap = () => {
     scrollwheel: false
   });
   updateRestaurants();
+  const map = document.getElementById('map');
+  map.setAttribute('role','application');
+  map.setAttribute('aria-label','Map with restaurants');
 }
 
 /**
